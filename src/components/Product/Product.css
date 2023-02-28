@@ -1,0 +1,44 @@
+.welcome_img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    /* opacity: 0.; */
+    z-index: -1;
+    object-fit: cover;
+    object-position: 50% 50%;
+}
+.welcome_block {
+    position: relative;
+    width: 100vw;
+    height: 200px;
+}
+
+.welcome_header {
+    width: 80%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+.welcome_header > button {
+    width: 150px;
+    border: none;
+    border-radius: 20px;
+    height: 35px;
+    background-color: rgb(0, 250, 79);
+    color: white;
+    font-weight: 700;
+}
+
+.product_list {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}

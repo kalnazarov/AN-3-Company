@@ -19,9 +19,12 @@ import EmailIcon from "@mui/icons-material/Email";
 import "../Navbar/Navbar.css";
 import userLogo from "../../media/profile.png";
 import navLogo from "../../media/logo.jpg";
+import proger from "../../media/proger.png";
 
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
+import { useAuth } from "../../contexts/AuthContext";
+import { width } from "@mui/system";
 
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 const style = {
@@ -45,16 +48,30 @@ const ColorButton = styled(Button)(({ theme }) => ({
 
 function Navbar() {
     const navigate = useNavigate();
+    const {
+        emailState,
+        user: { email },
+        password,
+        emailError,
+        passwordError,
+        hasAccount,
+        setPassword,
+        setEmail,
+        setHasAccount,
+        handleLogin,
+        handleSignup,
+        handleLogout,
+    } = useAuth();
+
     const [anchorElNav, setAnchorElNav] = React.useState(null);
     const [anchorElUser, setAnchorElUser] = React.useState(null);
-
     const [activeLog, setActiveLog] = useState(true);
     const [activeReg, setActiveReg] = useState(false);
-
+    const [anchorEl, setAnchorEl] = React.useState(null);
     const [open, setOpen] = React.useState(false);
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
-
+    // console.log(email);
     const handleOpenNavMenu = (event) => {
         setAnchorElNav(event.currentTarget);
     };
@@ -68,6 +85,14 @@ function Navbar() {
 
     const handleCloseUserMenu = () => {
         setAnchorElUser(null);
+    };
+
+    const handleMenu = (event) => {
+        setAnchorEl(event.currentTarget);
+    };
+
+    const handleCloseMenu = () => {
+        setAnchorEl(null);
     };
 
     return (
@@ -195,6 +220,7 @@ function Navbar() {
                                 sx={{
                                     mx: 7,
                                 }}
+                                onClick={() => navigate("/product")}
                             >
                                 Наши Продукты
                             </li>
@@ -231,11 +257,36 @@ function Navbar() {
                             }}
                         >
                             <img
-                                src={userLogo}
+                                src={email ? proger : userLogo}
                                 alt="#"
-                                onClick={handleOpen}
+                                onClick={email ? handleMenu : handleOpen}
                                 style={{ cursor: "pointer" }}
+                                width="40px"
                             />
+                            <Menu
+                                id="menu-appbar"
+                                anchorEl={anchorEl}
+                                anchorOrigin={{
+                                    vertical: "top",
+                                    horizontal: "right",
+                                }}
+                                keepMounted
+                                transformOrigin={{
+                                    vertical: "top",
+                                    horizontal: "right",
+                                }}
+                                open={Boolean(anchorEl)}
+                                onClose={handleCloseMenu}
+                            >
+                                <MenuItem
+                                    onClick={() => {
+                                        handleCloseMenu();
+                                        handleLogout();
+                                    }}
+                                >
+                                    logout
+                                </MenuItem>
+                            </Menu>
                         </div>
                         <Tooltip title="Open settings">
                             <h3
@@ -324,35 +375,56 @@ function Navbar() {
                         <Box
                             sx={{
                                 display: "flex",
-                                alignItems: "flex-end",
+                                // alignItems: "flex-end",
                                 justifyContent: "center",
                                 marginBottom: "20px",
                             }}
                         >
-                            <AccountCircle className="modalIcon" />
+                            <AccountCircle
+                                className="modalIcon"
+                                sx={{ marginTop: "20px" }}
+                            />
                             <TextField
-                                label="Enter username"
+                                label="Enter email"
                                 variant="standard"
+                                helperText={emailError}
+                                value={emailState}
+                                onChange={(e) => {
+                                    setEmail(e.target.value);
+                                }}
+                                sx={{ width: "100%" }}
                             />
                         </Box>
                         <Box
                             sx={{
                                 display: "flex",
-                                alignItems: "flex-end",
+                                // alignItems: "flex-end",
                                 justifyContent: "center",
                                 marginBottom: "20px",
                             }}
                         >
-                            <VpnKeyIcon className="modalIcon" />
+                            <VpnKeyIcon
+                                className="modalIcon"
+                                sx={{ marginTop: "20px" }}
+                            />
                             <TextField
                                 type="password"
                                 label="Enter your password"
                                 variant="standard"
+                                value={password}
+                                helperText={passwordError}
+                                onChange={(e) => {
+                                    setPassword(e.target.value);
+                                }}
+                                sx={{ width: "100%" }}
                             />
                         </Box>
                         <ColorButton
                             variant="contained"
-                            sx={{ color: "white" }}
+                            sx={{ color: "white", width: "60%" }}
+                            onClick={() => {
+                                handleLogin();
+                            }}
                         >
                             Вход
                         </ColorButton>
@@ -375,7 +447,7 @@ function Navbar() {
                             display: activeReg ? "block" : "none",
                         }}
                     >
-                        <Box
+                        {/* <Box
                             sx={{
                                 display: "flex",
                                 alignItems: "flex-end",
@@ -388,37 +460,55 @@ function Navbar() {
                                 label="Enter username"
                                 variant="standard"
                             />
-                        </Box>
+                        </Box> */}
                         <Box
                             sx={{
                                 display: "flex",
-                                alignItems: "flex-end",
+                                // alignItems: "flex-end",
                                 justifyContent: "center",
                                 marginBottom: "20px",
                             }}
                         >
-                            <EmailIcon className="modalIcon" />
+                            <EmailIcon
+                                className="modalIcon"
+                                sx={{ marginTop: "20px" }}
+                            />
                             <TextField
                                 label="Enter your email"
                                 variant="standard"
+                                helperText={emailError}
+                                value={emailState}
+                                onChange={(e) => {
+                                    setEmail(e.target.value);
+                                }}
+                                sx={{ width: "100%" }}
                             />
                         </Box>
                         <Box
                             sx={{
                                 display: "flex",
-                                alignItems: "flex-end",
+                                // alignItems: "flex-end",
                                 justifyContent: "center",
                                 marginBottom: "20px",
                             }}
                         >
-                            <VpnKeyIcon className="modalIcon" />
+                            <VpnKeyIcon
+                                className="modalIcon"
+                                sx={{ marginTop: "20px" }}
+                            />
                             <TextField
                                 type="password"
                                 label="Enter password"
                                 variant="standard"
+                                value={password}
+                                helperText={passwordError}
+                                onChange={(e) => {
+                                    setPassword(e.target.value);
+                                }}
+                                sx={{ width: "100%" }}
                             />
                         </Box>
-                        <Box
+                        {/* <Box
                             sx={{
                                 display: "flex",
                                 alignItems: "flex-end",
@@ -432,10 +522,13 @@ function Navbar() {
                                 label="Confirm password"
                                 variant="standard"
                             />
-                        </Box>
+                        </Box> */}
                         <ColorButton
                             variant="contained"
-                            sx={{ color: "white" }}
+                            sx={{ color: "white", width: "60%" }}
+                            onClick={() => {
+                                handleSignup();
+                            }}
                         >
                             Регистрация
                         </ColorButton>
