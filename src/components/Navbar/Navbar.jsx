@@ -18,7 +18,7 @@ import Button from "@mui/material/Button";
 import EmailIcon from "@mui/icons-material/Email";
 import "../Navbar/Navbar.css";
 import userLogo from "../../media/profile.png";
-import navLogo from "../../media/logo.png";
+import navLogo from "../../media/logo-removebg-preview.png";
 import proger from "../../media/proger.png";
 
 import { useNavigate } from "react-router-dom";
@@ -207,9 +207,29 @@ function Navbar() {
                                     height: "130px",
                                     marginTop: "10px",
                                 }}
+                                onClick={() => navigate("/")}
                                 src={navLogo}
                                 alt=""
                             />
+                        </Box>
+                        <Box>
+                            <Typography
+                                variant="h6"
+                                noWrap
+                                component="a"
+                                href="/"
+                                className="logo"
+                                sx={{
+                                    fontSize: "20px",
+                                    color: "gray",
+                                    textDecoration: "none",
+                                    width: "50px",
+                                    fontFamily: "revert-layer",
+                                    
+                                }}
+                            >
+                                Завод по изготовлению брусчатки
+                            </Typography>
                         </Box>
 
                         <ul
@@ -234,6 +254,7 @@ function Navbar() {
                                 sx={{
                                     mx: 7,
                                 }}
+                                onClick={() => navigate("/contacts")}
                             >
                                 Контакты
                             </li>
@@ -242,6 +263,7 @@ function Navbar() {
                                 sx={{
                                     mx: 7,
                                 }}
+                                onClick={() => navigate("/aboutus")}
                             >
                                 О нас
                             </li>
@@ -250,6 +272,7 @@ function Navbar() {
                                 sx={{
                                     mx: 7,
                                 }}
+                                onClick={() => navigate("/certificate")}
                             >
                                 Сертификаты
                             </li>

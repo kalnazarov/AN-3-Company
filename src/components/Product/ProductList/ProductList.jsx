@@ -26,8 +26,9 @@ const ProductList = () => {
     return (
         <div className="product_list">
             <h1>тротуарная плитка</h1>
+            {/* {email == ADMIN && <Button variant="contained">Тew product</Button>} */}
             {email && (
-                <Button onClick={() => navigate("/admin")} variant="contained">
+                <Button variant="contained" onClick={() => navigate("/admin")}>
                     new product
                 </Button>
             )}
