@@ -1,4 +1,4 @@
-import { Button } from "@mui/material";
+import { Box, Button } from "@mui/material";
 import React, { useContext, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../../../contexts/AuthContext";
@@ -26,23 +26,24 @@ const ProductList = () => {
     return (
         <div className="product_list">
             <h1>тротуарная плитка</h1>
-            {/* {email == ADMIN && <Button variant="contained">Тew product</Button>} */}
-            {email && (
-                <Button variant="contained" onClick={() => navigate("/admin")}>
+            {/* {email && (
+                <Button onClick={() => navigate("/admin")} variant="contained">
                     new product
                 </Button>
-            )}
-            <div
-                style={{
-                    display: "flex",
-                    flexWrap: "wrap",
+            )} */}
+            <Box
+                sx={{
+                    display: "grid",
+                    // flexWrap: "wrap",
                     justifyContent: "space-between",
+                    gridTemplateColumns: "1fr 1fr 1fr",
+                    gridGap: "30px",
                 }}
             >
                 {product?.map((item) => (
                     <ProductCard key={item.id} item={item} />
                 ))}
-            </div>
+            </Box>
         </div>
     );
 };
