@@ -3,8 +3,10 @@ import React, { useContext, useEffect } from "react";
 import { useAuth } from "../../../contexts/AuthContext";
 import { productContext } from "../../../contexts/ProductContext";
 import ProductCard from "./ProductCard";
+import { useNavigate } from "react-router-dom";
 
 const ProductList = () => {
+    const navigate = useNavigate();
     const {
         addProduct,
         getProduct,
@@ -24,7 +26,12 @@ const ProductList = () => {
     return (
         <div className="product_list">
             <h1>тротуарная плитка</h1>
-            {email == ADMIN && <Button variant="contained">new product</Button>}
+            {/* {email == ADMIN && <Button variant="contained">Тew product</Button>} */}
+            {email && (
+                <Button variant="contained" onClick={() => navigate("/admin")}>
+                    new product
+                </Button>
+            )}
             <div
                 style={{
                     display: "flex",

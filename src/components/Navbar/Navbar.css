@@ -10,11 +10,11 @@
   color: black !important;
 }
 .logo {
-  width: 160px;
+  width: 100px;
 }
 .logo:hover {
-  transition: 0.5s;
-  font-size: 30px;
+  transition: 2s;
+  font-size: 22px;
 }
 .headerUl {
   display: flex;
