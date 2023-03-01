@@ -9,7 +9,7 @@ const ProductCard = ({ item }) => {
     const {
         user: { email },
     } = useAuth();
-    const ADMIN = "admin@gmail.com";
+    const ADMIN = "adik@mail.ru";
     return (
         <div>
             <div style={{ width: "300px" }}>

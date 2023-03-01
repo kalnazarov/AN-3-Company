@@ -18,7 +18,7 @@ import Button from "@mui/material/Button";
 import EmailIcon from "@mui/icons-material/Email";
 import "../Navbar/Navbar.css";
 import userLogo from "../../media/profile.png";
-import navLogo from "../../media/logo.jpg";
+import navLogo from "../../media/logo-removebg-preview.png";
 import proger from "../../media/proger.png";
 
 import { useNavigate } from "react-router-dom";
@@ -201,10 +201,28 @@ function Navbar() {
                         </Typography> */}
                         <Box>
                             <img
-                                style={{ width: "150px", height: "150px" }}
+                                style={{ width: "30%", height: "30%" }}
                                 src={navLogo}
                                 alt=""
                             />
+                            <Typography
+                                variant="h6"
+                                noWrap
+                                component="a"
+                                href="/"
+                                className="logo"
+                                sx={{
+                                    display: { xs: "flex", md: "flex" },
+                                    fontWeight: 700,
+                                    fontSize: "28px",
+                                    color: "#31B787",
+                                    fontFamily: "Amaranth",
+                                    textDecoration: "none",
+                                    width: "30%",
+                                }}
+                            >
+                                
+                            </Typography>
                         </Box>
 
                         <ul
