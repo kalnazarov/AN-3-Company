@@ -18,7 +18,7 @@ import Button from "@mui/material/Button";
 import EmailIcon from "@mui/icons-material/Email";
 import "../Navbar/Navbar.css";
 import userLogo from "../../media/profile.png";
-import navLogo from "../../media/logo.jpg";
+import navLogo from "../../media/logo.png";
 import proger from "../../media/proger.png";
 
 import { useNavigate } from "react-router-dom";
@@ -96,7 +96,7 @@ function Navbar() {
     };
 
     return (
-        <Box sx={{ pt: "20px", pb: "20px" }}>
+        <Box>
             <AppBar position="static" className="header">
                 <Container
                     className="container"
@@ -112,6 +112,7 @@ function Navbar() {
                         disableGutters
                         sx={{
                             display: "flex",
+                            alignItems: "center",
                         }}
                     >
                         <Box
@@ -201,7 +202,11 @@ function Navbar() {
                         </Typography> */}
                         <Box>
                             <img
-                                style={{ width: "150px", height: "150px" }}
+                                style={{
+                                    width: "130px",
+                                    height: "130px",
+                                    marginTop: "10px",
+                                }}
                                 src={navLogo}
                                 alt=""
                             />
