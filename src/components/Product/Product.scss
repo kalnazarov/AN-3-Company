@@ -1,0 +1,85 @@
+$bear: #00899d;
+$gray: rgb(88, 88, 88);
+.welcome_img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    object-fit: cover;
+    object-position: 50% 50%;
+}
+.welcome_block {
+    position: relative;
+    width: 100%;
+    height: 200px;
+}
+
+.welcome_header {
+    width: 80%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+.welcome_header > button {
+    width: 150px;
+    border: none;
+    border-radius: 20px;
+    height: 35px;
+    background-color: rgb(0, 250, 79);
+    color: white;
+    font-weight: 700;
+}
+
+.product_list {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.about_product_image {
+    height: 300px;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-image: url(https://cs9.pikabu.ru/post_img/big/2020/07/27/1/1595802461299891757.jpg);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    filter: grayscale(100%);
+}
+.main_about_block {
+    width: 80%;
+    margin: auto;
+    padding: 50px 0px;
+    .about_block1 {
+        display: flex;
+        justify-content: space-between;
+        > div {
+            width: 50%;
+        }
+    }
+    .about_block2 {
+        h1 {
+            margin-top: 20px;
+            color: $bear;
+            text-align: center;
+        }
+        ul {
+            li {
+                color: $gray;
+            }
+        }
+        p {
+            color: $gray;
+        }
+    }
+}
