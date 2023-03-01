@@ -1,7 +1,86 @@
 $bear: #00899d;
 .home_sec-2 {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // margin-top: 50px;
+    padding: 80px 0px;
     h1 {
         color: $bear;
-        font-weight: 500;
+        font-weight: 600;
+        font-size: 40px;
+        margin-bottom: 60px;
+    }
+    .service_list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        .service_card {
+            background-color: #f6f6f6;
+            padding: 10px;
+            width: 570px;
+            margin-bottom: 20px;
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
+.home_sec-3 {
+    width: 100%;
+    background-color: #f6f6f6;
+    padding: 80px 0px;
+    .sec-3_list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 80%;
+        margin: auto;
+        .block {
+            width: 30%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            margin-bottom: 50px;
+            h4 {
+                font-size: 20px;
+                font-weight: normal;
+                margin-bottom: 10px;
+            }
+            .hexagon {
+                width: 75px;
+                height: 80px;
+                background: #2c3e50;
+                display: flex;
+                justify-content: center;
+                transition: 0.5s;
+                align-items: center;
+                -webkit-clip-path: polygon(
+                    50% 0%,
+                    100% 25%,
+                    100% 75%,
+                    50% 100%,
+                    0% 75%,
+                    0% 25%
+                );
+                clip-path: polygon(
+                    50% 0%,
+                    100% 25%,
+                    100% 75%,
+                    50% 100%,
+                    0% 75%,
+                    0% 25%
+                );
+            }
+            &:hover {
+                color: #00899d;
+                .hexagon {
+                    background: #00899d;
+                }
+            }
+        }
     }
 }
