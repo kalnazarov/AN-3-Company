@@ -8,6 +8,9 @@ import ConfirmPage from "./pages/ConfirmPage/ConfirmPage";
 import ProductPage from "./pages/ProductPage";
 import AdminPage from "./pages/AdminPage";
 import Edit from "./components/Edit/Edit";
+import ContactsPage from "./pages/ContactsPage";
+import AboutPage from "./pages/AboutPage";
+import CertificatePage from "./pages/CertificatePage";
 
 const MainRoutes = () => {
     return (
@@ -18,6 +21,9 @@ const MainRoutes = () => {
                 <Route path="/login" element={<LoginPage />} />
                 <Route path="/confirm" element={<ConfirmPage />} />
                 <Route path="/product" element={<ProductPage />} />
+                <Route path="/contacts" element={<ContactsPage />} />
+                <Route path="/aboutus" element={<AboutPage />} />
+                <Route path="/certificate" element={<CertificatePage />} />
                 <Route path="/admin" element={<AdminPage />} />
                 <Route path="/edit/:id" element={<Edit />} />
             </Route>

@@ -33,10 +33,7 @@ const Footer = () => {
         "Компания",
     ];
     const onas = [
-        "Battle Breakers",
-        "Battle Breakers",
-        "Fortnite",
-        "Infinity Blade",
+        "AN-3 Company - Строительная и производственная компания, специализирующаяся на благоустройстве территорий, строительстве дорог и производстве тротуарной плитки.",
     ];
     const onas2 = ["Robo Recall", "Shadow Complex", "Unreal Tournament"];
     const corporate = [
@@ -90,141 +87,143 @@ const Footer = () => {
                     margin: "0 auto",
                 }}
             >
-                <Box onClick={() => console.log("zxc")}>
-                    <Typography
-                        sx={{
-                            padding: "3px 10px",
-                            color: "gray",
-                            [theme.breakpoints.down("md")]: {
-                                display: "none",
-                            },
-                        }}
-                    >
-                        О Компании
-                    </Typography>
+                <Box sx={{ display: "flex", justifyContent: "end" }}>
+                    <Box sx={{ width: "45%" }}>
+                        <Typography
+                            sx={{
+                                padding: "3px 10px",
+                                color: "White",
+                                fontSize: "30px",
+                                [theme.breakpoints.down("md")]: {
+                                    display: "none",
+                                },
+                            }}
+                        >
+                            О Компании
+                        </Typography>
 
-                    <Box
-                        sx={{
-                            display: "flex",
-                        }}
-                    >
-                        <Box>
-                            <List
+                        <Box
+                            sx={{
+                                display: "flex",
+                            }}
+                        >
+                            <Box
                                 sx={{
-                                    [theme.breakpoints.down("md")]: {
-                                        padding: "0",
-                                    },
+                                    width: "70%",
                                 }}
                             >
-                                {onas.map((i, index) => (
-                                    <ListItem
-                                        key={index}
-                                        sx={{
-                                            padding: "10px",
-                                            margin: 0,
-                                            [theme.breakpoints.down("md")]: {
-                                                display: "none",
-                                            },
-                                        }}
-                                    >
-                                        {
-                                            <Link
-                                                sx={{
-                                                    color: "white",
-                                                    cursor: "pointer",
-                                                    transition: "0.5s",
-                                                    textDecoration: "none",
-                                                    "&:hover": {
-                                                        color: "#0099ff",
+                                <List
+                                    sx={{
+                                        [theme.breakpoints.down("md")]: {
+                                            padding: "0",
+                                        },
+                                    }}
+                                >
+                                    {onas.map((i, index) => (
+                                        <ListItem
+                                            key={index}
+                                            sx={{
+                                                padding: "10px",
+                                                margin: 0,
+                                                [theme.breakpoints.down("md")]:
+                                                    {
+                                                        display: "none",
                                                     },
-                                                }}
-                                            >
-                                                {i}
-                                            </Link>
-                                        }
-                                    </ListItem>
-                                ))}
-                            </List>
+                                            }}
+                                        >
+                                            {
+                                                <Link
+                                                    sx={{
+                                                        color: "gray",
+                                                        fontSize: "18px",
+                                                        cursor: "pointer",
+                                                        transition: "0.5s",
+                                                        textDecoration: "none",
+                                                        fontFamily:
+                                                            "revert-layer",
+                                                        "&:hover": {
+                                                            color: "#0099ff",
+                                                        },
+                                                    }}
+                                                >
+                                                    {i}
+                                                </Link>
+                                            }
+                                        </ListItem>
+                                    ))}
+                                </List>
+                            </Box>
                         </Box>
-                        <Box>
-                            <List
-                                sx={{
-                                    [theme.breakpoints.down("md")]: {
-                                        padding: "0",
-                                    },
-                                }}
-                            >
-                                {contact.map((i, index) => (
-                                    <ListItem
-                                        key={index}
-                                        sx={{
-                                            padding: "10px",
-                                            margin: 0,
-                                            [theme.breakpoints.down("md")]: {
-                                                display: "none",
-                                            },
-                                        }}
-                                    >
-                                        {
-                                            <Link
-                                                sx={{
-                                                    color: "white",
-                                                    cursor: "pointer",
-                                                    transition: "0.5s",
-                                                    textDecoration: "none",
-                                                    "&:hover": {
-                                                        color: "#0099ff",
-                                                    },
-                                                }}
-                                            >
-                                                {i}
-                                            </Link>
-                                        }
-                                    </ListItem>
-                                ))}
-                            </List>
-                        </Box>
+                    </Box>
+                    <Box sx={{ width: "45%" }}>
+                        <Typography
+                            sx={{
+                                padding: "3px 10px",
+                                color: "White",
+                                fontSize: "30px",
+                                [theme.breakpoints.down("md")]: {
+                                    display: "none",
+                                },
+                            }}
+                        >
+                            О Компании
+                        </Typography>
 
-                        <Box>
-                            <List
+                        <Box
+                            sx={{
+                                display: "flex",
+                            }}
+                        >
+                            <Box
                                 sx={{
-                                    [theme.breakpoints.down("md")]: {
-                                        padding: "0",
-                                    },
+                                    width: "70%",
                                 }}
                             >
-                                {onas2.map((i, index) => (
-                                    <ListItem
-                                        key={index}
-                                        sx={{
-                                            padding: "10px",
-                                            margin: 0,
-                                            [theme.breakpoints.down("md")]: {
-                                                display: "none",
-                                            },
-                                        }}
-                                    >
-                                        {
-                                            <Link
-                                                sx={{
-                                                    color: "white",
-                                                    cursor: "pointer",
-                                                    transition: "0.5s",
-                                                    textDecoration: "none",
-                                                    "&:hover": {
-                                                        color: "#0099ff",
+                                <List
+                                    sx={{
+                                        [theme.breakpoints.down("md")]: {
+                                            padding: "0",
+                                        },
+                                    }}
+                                >
+                                    {onas.map((i, index) => (
+                                        <ListItem
+                                            key={index}
+                                            sx={{
+                                                padding: "10px",
+                                                margin: 0,
+                                                [theme.breakpoints.down("md")]:
+                                                    {
+                                                        display: "none",
                                                     },
-                                                }}
-                                            >
-                                                {i}
-                                            </Link>
-                                        }
-                                    </ListItem>
-                                ))}
-                            </List>
+                                            }}
+                                        >
+                                            {
+                                                <Link
+                                                    sx={{
+                                                        color: "gray",
+                                                        fontSize: "18px",
+                                                        cursor: "pointer",
+                                                        transition: "0.5s",
+                                                        textDecoration: "none",
+                                                        fontFamily:
+                                                            "revert-layer",
+                                                        "&:hover": {
+                                                            color: "#0099ff",
+                                                        },
+                                                    }}
+                                                >
+                                                    {i}
+                                                </Link>
+                                            }
+                                        </ListItem>
+                                    ))}
+                                </List>
+                            </Box>
                         </Box>
                     </Box>
                 </Box>
+
                 <Box>
                     <List
                         className="icons"
@@ -306,15 +305,9 @@ const Footer = () => {
                     }}
                 >
                     <Typography sx={{ fontSize: "13px" }}>
-                        With us, you can easily get Steam, Origin and Uplay
-                        games. Keys are sent immediately. 100% satisfaction
-                        guaranteed. Copyright © 2022 Key-Drop. All Rights
-                        Reserved.
+                        © All Rights Reserved by AN-3 Company TOO
                     </Typography>
-                    <Typography sx={{ fontSize: "13px" }}>
-                        APRODI LTD (Stavrou, 74, 1st floor, Office 102,
-                        Strovolos, 2035, Nicosia, Cyprus)
-                    </Typography>
+                    
                 </Box>
             </Box>
         </Box>
