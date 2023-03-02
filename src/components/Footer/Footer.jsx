@@ -33,15 +33,7 @@ const Footer = () => {
         "Компания",
     ];
     const onas = [
-        "AN-3 Company - Строительная и производственная компания, специализирующаяся на благоустройстве территорий, строительстве дорог и производстве тротуарной плитки.",
-    ];
-    const onas2 = ["Robo Recall", "Shadow Complex", "Unreal Tournament"];
-    const corporate = [
-        "Правила для неофициальных материалов",
-        "Исследование пользовательского опыта",
-        "Лицензионное соглашение с конечным пользователем магазина",
-        "Сетевые службы",
-        "Правила сообщества",
+        "AN-3 Company - Завод по производству бетонных изделий",
     ];
 
     const theme = createTheme({
@@ -191,7 +183,7 @@ const Footer = () => {
                                         fontSize: "18px",
                                     }}
                                 >
-                                    г. Астана, Проспект Маршала Жукова, д. 2
+                                    г. Астана, Промзона 6/2
                                 </Typography>
                                 <Typography
                                     sx={{
@@ -212,7 +204,7 @@ const Footer = () => {
                                         fontSize: "20px",
                                     }}
                                 >
-                                    +7 (495) 147-23-73
+                                    +7 (700) 500 91 71
                                 </Typography>
                                 <Typography
                                     sx={{
@@ -223,12 +215,8 @@ const Footer = () => {
                                 >
                                     WhatsApp
                                 </Typography>
-                                <Typography>
-                                    Email:
-                                </Typography>
-                                <Typography>
-                                    an3companykz@mail.ru
-                                </Typography>
+                                <Typography>Email:</Typography>
+                                <Typography>an3companykz@mail.ru</Typography>
                             </Box>
                         </Box>
                     </Box>

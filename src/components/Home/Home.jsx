@@ -8,6 +8,8 @@ import AgricultureOutlinedIcon from "@mui/icons-material/AgricultureOutlined";
 import ConstructionOutlinedIcon from "@mui/icons-material/ConstructionOutlined";
 import AnchorOutlinedIcon from "@mui/icons-material/AnchorOutlined";
 import AccountBalanceWalletOutlinedIcon from "@mui/icons-material/AccountBalanceWalletOutlined";
+import CardMembershipIcon from "@mui/icons-material/CardMembership";
+import DesignServicesIcon from '@mui/icons-material/DesignServices';
 const Home = () => {
     return (
         <div>
@@ -18,8 +20,9 @@ const Home = () => {
                             data-aos="fade-down"
                             data-aos-easing="linear"
                             data-aos-duration="1500"
+                            style={{ width: "80%" }}
                         >
-                            Благоустройство территорий и строительство дорог
+                            Брусчатка лучшая альтернатива асфальту
                         </h1>
                         <div className="border__line"></div>
                         <div className="attachment__body-text_p p-text">
@@ -38,7 +41,7 @@ const Home = () => {
                 <div className="service_list">
                     {service.map((item) => (
                         <div className="service_card" key={item.id}>
-                            <img className="img_card" src={item.img} alt="" />
+                            <img className="img" src={item.img} alt="" />
                             <div className="service_card_body">
                                 <h4>{item.title}</h4>
                                 <p>{item.desc}</p>
@@ -71,21 +74,21 @@ const Home = () => {
                         </div>
                         <h4>Команда Профессионалов</h4>
                         <p>
-                            Придерживаемся проекта производства работ.
-                            Оперативно решаем возникшие вопросы на площадке.
+                            Сплоченный коллектив, грамотное управление
+                            персоналом, прозрачное взаимодействие с клиентом.
                         </p>
                     </div>
                     <div className="block">
                         <div className="hexagon">
-                            <AgricultureOutlinedIcon
+                            <CardMembershipIcon
                                 fontSize="large"
                                 sx={{ color: "white" }}
                             />
                         </div>
-                        <h4>Свой Парк Спецтехники</h4>
+                        <h4>Сертификация</h4>
                         <p>
-                            Придерживаемся проекта производства работ.
-                            Оперативно решаем возникшие вопросы на площадке.
+                            Вся выпускаемая продукция имеет сертификат
+                            соответствия и сертификат о происхождения товара
                         </p>
                     </div>
                     <div className="block">
@@ -97,8 +100,9 @@ const Home = () => {
                         </div>
                         <h4>Собственное Производство</h4>
                         <p>
-                            Придерживаемся проекта производства работ.
-                            Оперативно решаем возникшие вопросы на площадке.
+                            Компания на рынке с 2022 года. За короткий
+                            промежуток времени мы проработали десятки сложных
+                            задач.
                         </p>
                     </div>
                     <div className="block">
@@ -110,21 +114,21 @@ const Home = () => {
                         </div>
                         <h4>Большой Опыт</h4>
                         <p>
-                            Придерживаемся проекта производства работ.
-                            Оперативно решаем возникшие вопросы на площадке.
+                            Производим заказ на любой объем, крупными и мелкими
+                            партиями.
                         </p>
                     </div>
                     <div className="block">
                         <div className="hexagon">
-                            <AccountBalanceWalletOutlinedIcon
+                            <DesignServicesIcon
                                 fontSize="large"
                                 sx={{ color: "white" }}
                             />
                         </div>
-                        <h4>Придерживаемся Бюджета</h4>
+                        <h4>Материалы</h4>
                         <p>
-                            Придерживаемся проекта производства работ.
-                            Оперативно решаем возникшие вопросы на площадке.
+                            Для изготовления нашей продукции используются самые
+                            качественные материалы
                         </p>
                     </div>
                 </div>
