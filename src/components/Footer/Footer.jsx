@@ -97,6 +97,7 @@ const Footer = () => {
                                 [theme.breakpoints.down("md")]: {
                                     display: "none",
                                 },
+                                pb: "20px",
                             }}
                         >
                             О Компании
@@ -164,9 +165,10 @@ const Footer = () => {
                                 [theme.breakpoints.down("md")]: {
                                     display: "none",
                                 },
+                                pb: "20px",
                             }}
                         >
-                            О Компании
+                            Контакты
                         </Typography>
 
                         <Box
@@ -179,46 +181,54 @@ const Footer = () => {
                                     width: "70%",
                                 }}
                             >
-                                <List
+                                <Typography
                                     sx={{
-                                        [theme.breakpoints.down("md")]: {
-                                            padding: "0",
+                                        color: "gray",
+                                        fontFamily: "revert-layer",
+                                        "&:hover": {
+                                            color: "#0099ff",
                                         },
+                                        fontSize: "18px",
                                     }}
                                 >
-                                    {onas.map((i, index) => (
-                                        <ListItem
-                                            key={index}
-                                            sx={{
-                                                padding: "10px",
-                                                margin: 0,
-                                                [theme.breakpoints.down("md")]:
-                                                    {
-                                                        display: "none",
-                                                    },
-                                            }}
-                                        >
-                                            {
-                                                <Link
-                                                    sx={{
-                                                        color: "gray",
-                                                        fontSize: "18px",
-                                                        cursor: "pointer",
-                                                        transition: "0.5s",
-                                                        textDecoration: "none",
-                                                        fontFamily:
-                                                            "revert-layer",
-                                                        "&:hover": {
-                                                            color: "#0099ff",
-                                                        },
-                                                    }}
-                                                >
-                                                    {i}
-                                                </Link>
-                                            }
-                                        </ListItem>
-                                    ))}
-                                </List>
+                                    г. Астана, Проспект Маршала Жукова, д. 2
+                                </Typography>
+                                <Typography
+                                    sx={{
+                                        fontFamily: "revert-layer",
+
+                                        fontSize: "20px",
+                                        color: "gray",
+                                    }}
+                                >
+                                    Телефон:
+                                </Typography>
+                                <Typography
+                                    sx={{
+                                        fontFamily: "revert-layer",
+                                        "&:hover": {
+                                            color: "#0099ff",
+                                        },
+                                        fontSize: "20px",
+                                    }}
+                                >
+                                    +7 (495) 147-23-73
+                                </Typography>
+                                <Typography
+                                    sx={{
+                                        fontFamily: "revert-layer",
+
+                                        fontSize: "20px",
+                                    }}
+                                >
+                                    WhatsApp
+                                </Typography>
+                                <Typography>
+                                    Email:
+                                </Typography>
+                                <Typography>
+                                    an3companykz@mail.ru
+                                </Typography>
                             </Box>
                         </Box>
                     </Box>
@@ -238,9 +248,9 @@ const Footer = () => {
                         <ListItem>
                             <Link
                                 className="icon-instagram"
-                                href="https://t.me/epicgamesru"
+                                href="https://www.instagram.com/an3companykz/"
                             >
-                                <TelegramIcon
+                                <InstagramIcon
                                     sx={{
                                         color: "gray",
                                         "&:hover": {
@@ -307,7 +317,6 @@ const Footer = () => {
                     <Typography sx={{ fontSize: "13px" }}>
                         © All Rights Reserved by AN-3 Company TOO
                     </Typography>
-                    
                 </Box>
             </Box>
         </Box>
