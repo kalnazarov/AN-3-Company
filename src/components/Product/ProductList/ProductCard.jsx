@@ -3,7 +3,7 @@ import React, { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../../../contexts/AuthContext";
 import { productContext } from "../../../contexts/ProductContext";
-import "./Product.scss";
+import "./ProductList.scss";
 const ProductCard = ({ item }) => {
     const { deleteProduct } = useContext(productContext);
     const navigate = useNavigate();

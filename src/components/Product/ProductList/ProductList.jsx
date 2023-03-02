@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { useAuth } from "../../../contexts/AuthContext";
 import { productContext } from "../../../contexts/ProductContext";
 import ProductCard from "./ProductCard";
+import "./ProductList.scss";
 
 const ProductList = () => {
     const {
@@ -39,6 +40,7 @@ const ProductList = () => {
                     gridTemplateColumns: "1fr 1fr 1fr",
                     gridGap: "30px",
                 }}
+                className="product_list_block"
             >
                 {product?.map((item) => (
                     <ProductCard key={item.id} item={item} />

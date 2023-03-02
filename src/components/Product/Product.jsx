@@ -109,6 +109,7 @@ const Product = () => {
                         свяжется с вами в тот же день.
                     </p>
                 </div>
+                <div className="about_block3"></div>
             </div>
         </div>
     );

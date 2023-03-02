@@ -212,7 +212,7 @@ function Navbar() {
                                 alt=""
                             />
                         </Box>
-                        <Box>
+                        {/* <Box>
                             <Typography
                                 variant="h6"
                                 noWrap
@@ -229,7 +229,7 @@ function Navbar() {
                             >
                                 Завод по изготовлению брусчатки
                             </Typography>
-                        </Box>
+                        </Box> */}
 
                         <ul
                             className="headerUl"

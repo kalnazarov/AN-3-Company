@@ -29,6 +29,7 @@
     gap: 4%;
     flex-direction: column;
     height: 70%;
+    margin: auto;
 }
 .attachment__body-text h1 {
     font-size: 4em;
@@ -46,8 +47,11 @@
 }
 .attachment__body-text .p-text {
     width: 90%;
+    margin: auto;
+
     /* margin-left: 12%; */
     align-items: center;
+    /* text-align: center; */
 }
 .attachment__body-text .p-text p {
     color: #fff;
