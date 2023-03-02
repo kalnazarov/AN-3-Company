@@ -34,7 +34,7 @@ const Home = () => {
                 </div>
             </div>
             <div className="home_sec-2">
-                <h1 >Мы предлагаем</h1>
+                <h1>Мы предлагаем</h1>
                 <div className="service_list">
                     {service.map((item) => (
                         <div className="service_card" key={item.id}>
@@ -127,6 +127,62 @@ const Home = () => {
                             Оперативно решаем возникшие вопросы на площадке.
                         </p>
                     </div>
+                </div>
+            </div>
+            <div className="home_sec-4">
+                <h1>Строим светлое будущее</h1>
+            </div>
+            <div className="home_sec-5">
+                <h1>Наши работы</h1>
+                <div className="home_sec-5_img_block">
+                    <img
+                        src="https://psk-triada.ru/img/portfolio/1_big.jpg"
+                        alt=""
+                    />
+                    <img
+                        src=" https://psk-triada.ru/img/portfolio/2_big.jpg"
+                        alt=""
+                    />
+                    <img
+                        src="https://psk-triada.ru/img/portfolio/3_big.jpg"
+                        alt=""
+                    />
+                    <img
+                        src="https://psk-triada.ru/img/portfolio/4_big.jpg"
+                        alt=""
+                    />
+                    <img
+                        src="https://psk-triada.ru/img/portfolio/5_big.jpg"
+                        alt=""
+                    />
+                    <img
+                        src="https://psk-triada.ru/img/portfolio/6_big.jpg"
+                        alt=""
+                    />
+                    <img
+                        src="https://psk-triada.ru/img/portfolio/7_big.jpg"
+                        alt=""
+                    />
+                    <img
+                        src="https://psk-triada.ru/img/portfolio/8_big.jpg"
+                        alt=""
+                    />
+                    <img
+                        src="https://psk-triada.ru/img/portfolio/9_big.jpg"
+                        alt=""
+                    />
+                    <img
+                        src="https://psk-triada.ru/img/portfolio/10_big.jpg"
+                        alt=""
+                    />
+                    <img
+                        src="https://psk-triada.ru/img/portfolio/11_big.jpg"
+                        alt=""
+                    />
+                    <img
+                        src="https://psk-triada.ru/img/portfolio/12_big.jpg"
+                        alt=""
+                    />
                 </div>
             </div>
         </div>

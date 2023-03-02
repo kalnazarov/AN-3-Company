@@ -42,3 +42,15 @@ $bear: #00899d;
         margin-top: 40px;
     }
 }
+@media all and (max-width: 1200px) {
+    .product_list_block {
+        display: grid;
+        grid-template-columns: 1fr 1fr !important;
+    }
+}
+@media all and (max-width: 700px) {
+    .product_list_block {
+        display: grid;
+        grid-template-columns: 1fr !important;
+    }
+}
