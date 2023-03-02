@@ -34,11 +34,11 @@ const Home = () => {
                 </div>
             </div>
             <div className="home_sec-2">
-                <h1>мы предлагаем</h1>
+                <h1 >Мы предлагаем</h1>
                 <div className="service_list">
                     {service.map((item) => (
                         <div className="service_card" key={item.id}>
-                            <img src={item.img} alt="" />
+                            <img className="img_card" src={item.img} alt="" />
                             <div className="service_card_body">
                                 <h4>{item.title}</h4>
                                 <p>{item.desc}</p>

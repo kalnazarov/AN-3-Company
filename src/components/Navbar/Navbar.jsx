@@ -17,7 +17,7 @@ import { styled } from "@mui/material/styles";
 import Button from "@mui/material/Button";
 import EmailIcon from "@mui/icons-material/Email";
 import "../Navbar/Navbar.css";
-import userLogo from "../../media/profile.png";
+import userLogo from "../../media/219983.png";
 import navLogo from "../../media/logo-removebg-preview.png";
 import proger from "../../media/proger.png";
 
@@ -96,7 +96,7 @@ function Navbar() {
     };
 
     return (
-        <Box>
+        <Box sx={{ pt: "10px ", pb: "10px" }}>
             <AppBar position="static" className="header">
                 <Container
                     className="container"
@@ -225,7 +225,6 @@ function Navbar() {
                                     textDecoration: "none",
                                     width: "50px",
                                     fontFamily: "revert-layer",
-                                    
                                 }}
                             >
                                 Завод по изготовлению брусчатки
@@ -289,7 +288,7 @@ function Navbar() {
                                 alt="#"
                                 onClick={email ? handleMenu : handleOpen}
                                 style={{ cursor: "pointer" }}
-                                width="40px"
+                                width="50px"
                             />
                             <Menu
                                 id="menu-appbar"
