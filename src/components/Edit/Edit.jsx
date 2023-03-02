@@ -43,7 +43,7 @@ const Edit = () => {
     }
 
     return (
-        <div>
+        <div className="admin_block">
             <div
                 style={{
                     display: "flex",
@@ -51,7 +51,9 @@ const Edit = () => {
                     width: "300px",
                     margin: "auto",
                 }}
+                className="input_block"
             >
+                <h1>EDIT</h1>
                 <input
                     type="text"
                     onChange={(e) => setTitle(e.target.value)}

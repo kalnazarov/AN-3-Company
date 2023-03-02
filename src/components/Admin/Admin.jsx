@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
 import { productContext } from "../../contexts/ProductContext";
-
+import "./Admin.scss";
 const Admin = () => {
     const [title, setTitle] = useState("");
     const [size, setSize] = useState("");
@@ -22,15 +22,17 @@ const Admin = () => {
     }
 
     return (
-        <div>
+        <div className="admin_block">
             <div
                 style={{
                     display: "flex",
                     flexDirection: "column",
-                    width: "300px",
+                    width: "400px",
                     margin: "auto",
                 }}
+                className="input_block"
             >
+                <h1>ADMIN</h1>
                 <input
                     type="text"
                     onChange={(e) => setTitle(e.target.value)}
