@@ -39,7 +39,7 @@
     text-align: center;
     word-wrap: break-word;
 }
-.attachment__body-text .border__line {
+.border__line {
     width: 30%;
     height: 3px;
     border-radius: 1px;
@@ -48,7 +48,7 @@
 .attachment__body-text .p-text {
     width: 90%;
     margin: auto;
-
+    display: flex;
     /* margin-left: 12%; */
     align-items: center;
     /* text-align: center; */
@@ -60,28 +60,34 @@
     font-size: 22px;
     word-wrap: break-word;
     width: 90%;
+    margin: auto;
 }
-.attachment__body-text .attachment__body-btn {
-    width: 80%;
-    display: flex;
-    justify-content: center;
-}
-.attachment__body-text .attachment__body-btn a {
-    color: black;
-    background-color: orange;
-    padding: 2% 8%;
-    font-family: "Montserrat";
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 1rem;
-    transition: 0.2s;
-    animation: text-point 1s linear infinite alternate-reverse;
-}
-@keyframes text-point {
-    0% {
-        transform: translateY(0px);
+
+@media all and (max-width: 1024px) {
+    .attachment__body-text > h1 {
+        font-size: 50px;
     }
-    100% {
-        transform: translateY(30px);
+}
+
+@media all and (max-width: 640px) {
+    .attachment__body-text > h1 {
+        font-size: 42px;
+    }
+    .container__attachment {
+        height: 420px;
+    }
+    .p-text {
+        display: none !important;
+    }
+    .border__line {
+        display: none !important;
+    }
+    .attachment__body-text {
+        height: auto;
+    }
+}
+@media all and (max-width: 460px) {
+    .attachment__body-text > h1 {
+        font-size: 36px;
     }
 }

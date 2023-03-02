@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { service } from "../../consts";
 import "./Home.css";
 import "./Home.scss";
@@ -8,7 +8,9 @@ import AgricultureOutlinedIcon from "@mui/icons-material/AgricultureOutlined";
 import ConstructionOutlinedIcon from "@mui/icons-material/ConstructionOutlined";
 import AnchorOutlinedIcon from "@mui/icons-material/AnchorOutlined";
 import AccountBalanceWalletOutlinedIcon from "@mui/icons-material/AccountBalanceWalletOutlined";
+import { Button } from "@mui/material";
 const Home = () => {
+    const [eshe, setEshe] = useState(false);
     return (
         <div>
             <div className="container__attachment">
@@ -88,7 +90,7 @@ const Home = () => {
                             Оперативно решаем возникшие вопросы на площадке.
                         </p>
                     </div>
-                    <div className="block">
+                    <div className="block" id={eshe ? "est" : "netu"}>
                         <div className="hexagon">
                             <ConstructionOutlinedIcon
                                 fontSize="large"
@@ -101,7 +103,7 @@ const Home = () => {
                             Оперативно решаем возникшие вопросы на площадке.
                         </p>
                     </div>
-                    <div className="block">
+                    <div className="block" id={eshe ? "est" : "netu"}>
                         <div className="hexagon">
                             <AnchorOutlinedIcon
                                 fontSize="large"
@@ -114,7 +116,7 @@ const Home = () => {
                             Оперативно решаем возникшие вопросы на площадке.
                         </p>
                     </div>
-                    <div className="block">
+                    <div className="block" id={eshe ? "est" : "netu"}>
                         <div className="hexagon">
                             <AccountBalanceWalletOutlinedIcon
                                 fontSize="large"
@@ -127,6 +129,12 @@ const Home = () => {
                             Оперативно решаем возникшие вопросы на площадке.
                         </p>
                     </div>
+                    <button
+                        onClick={() => setEshe(!eshe)}
+                        className="sec-3_list_button"
+                    >
+                        {eshe ? "скрыть" : "еще"}
+                    </button>
                 </div>
             </div>
             <div className="home_sec-4">
