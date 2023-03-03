@@ -27,11 +27,11 @@ const ProductList = () => {
     return (
         <div className="product_list">
             <h1>тротуарная плитка</h1>
-            {/* {email && (
+            {email && (
                 <Button onClick={() => navigate("/admin")} variant="contained">
                     new product
                 </Button>
-            )} */}
+            )}
             <Box
                 sx={{
                     display: "grid",

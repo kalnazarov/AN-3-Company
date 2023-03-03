@@ -7,7 +7,7 @@ const About = () => {
         <div>
             <div className="welcome_block">
                 <img
-                    src="https://primamediamts.servicecdn.ru/f/big/2663/2662869.jpeg?0c1efaf24413b6926a2a14be8b0f659f"
+                    src="https://mobimg.b-cdn.net/v3/fetch/7f/7fb9fadc0caba88dcf4278165931debf.jpeg"
                     alt=""
                     className="welcome_img"
                 />
@@ -16,7 +16,8 @@ const About = () => {
                         style={{
                             fontSize: "35px",
                             fontWeight: "500",
-                            backgroundColor: "gray",
+                            backgroundColor: "rgb(120,219,226,0.5)",
+
                         }}
                     >
                         О КОМАНДЕ
