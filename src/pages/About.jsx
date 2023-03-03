@@ -17,7 +17,6 @@ const About = () => {
                             fontSize: "35px",
                             fontWeight: "500",
                             backgroundColor: "rgb(120,219,226,0.5)",
-
                         }}
                     >
                         О КОМАНДЕ
@@ -68,15 +67,12 @@ const About = () => {
                         fontFamily: "revert-layer",
                     }}
                 >
-                    Наша команда собрана в 2004 году, с 2014 года она существует
-                    как ПСК ТРИАДА. За эти годы мы поучаствовали в 300+ проектах
-                    по Москве и области. В штате 16 опытных специалистов со
-                    своей зоной ответственности, выполняющих руководящие
-                    функции. Они владеют управленческими компетенциями и
-                    организуют производственные процессы/работу на площадке,
-                    проектируют, подготавливают сметы, подбирают и управляют
-                    командой на каждом проекте. Помимо штатных специалистов с
-                    ПСК ТРИАДА сотрудничает более 100 человек.
+                    Наша команда существует с 2022 года как AN-3 Company.
+                    Опытные специалисты со своей зоной ответственности,
+                    выполняющих руководящие функции. Они владеют управленческими
+                    компетенциями и организуют производственные процессы/работу
+                    на площадке, проектируют, подготавливают сметы, подбирают и
+                    управляют командой.
                 </Typography>
                 <Typography
                     sx={{
@@ -182,6 +178,31 @@ const About = () => {
                             Постоянное расширение ассортимента
                         </Typography>
                     </Box>
+                </Box>
+            </Box>
+            <Box sx={{ display: "flex", justifyContent: "center" }}>
+                <Box
+                    sx={{
+                        display: "flex",
+                        justifyContent: "space-evenly",
+                        width: "80%",
+                    }}
+                >
+                    <img
+                        style={{ width: "30%", pt: "20px" }}
+                        src="https://krasivosti.pro/uploads/posts/2021-04/1618579272_34-krasivosti_pro-p-lev-na-dereve-lvi-krasivo-foto-40.jpg"
+                        alt=""
+                    />
+                    <img
+                        style={{ width: "30%" }}
+                        src="https://krasivosti.pro/uploads/posts/2021-04/1618579272_34-krasivosti_pro-p-lev-na-dereve-lvi-krasivo-foto-40.jpg"
+                        alt=""
+                    />
+                    <img
+                        style={{ width: "30%", pt: "20px" }}
+                        src="https://krasivosti.pro/uploads/posts/2021-04/1618579272_34-krasivosti_pro-p-lev-na-dereve-lvi-krasivo-foto-40.jpg"
+                        alt=""
+                    />
                 </Box>
             </Box>
         </div>
