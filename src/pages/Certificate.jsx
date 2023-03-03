@@ -5,7 +5,7 @@ import snim from "../media/snim.png";
 import snim2 from "../media/snim2.png";
 import snim3 from "../media/snim3.png";
 import snim4 from "../media/snim4.png";
-
+import "./Contacts.scss";
 const Certificate = () => {
     return (
         <div>
@@ -21,12 +21,10 @@ const Certificate = () => {
                             fontSize: "35px",
                             fontWeight: "500",
                             backgroundColor: "rgb(120,219,226,0.5)",
-                           
                         }}
                     >
                         Сертификаты
                     </h2>
-                    <button>WhatsApp</button>
                 </div>
             </div>
             <Box
@@ -48,12 +46,14 @@ const Certificate = () => {
                     Наши благодарности
                 </Typography>
             </Box>
-            <Box
-                sx={{
+            <div
+                style={{
                     display: "flex",
                     justifyContent: "space-evenly",
+                    flexWrap: "wrap",
                     pb: "50px",
                 }}
+                className="cert_img_block"
             >
                 <img
                     style={{
@@ -91,7 +91,7 @@ const Certificate = () => {
                     src={snim4}
                     alt=""
                 />
-            </Box>
+            </div>
         </div>
     );
 };

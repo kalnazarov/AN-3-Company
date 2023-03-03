@@ -14,14 +14,14 @@ const About = () => {
                 <div className="welcome_header">
                     <h2
                         style={{
-                            fontSize: "35px",
+                            fontSize: "32px",
                             fontWeight: "500",
                             backgroundColor: "rgb(120,219,226,0.5)",
                         }}
                     >
                         О КОМАНДЕ
                     </h2>
-                    <button>WhatsApp</button>
+                    {/* <button>WhatsApp</button> */}
                 </div>
             </div>
             <Box
@@ -31,6 +31,7 @@ const About = () => {
                     display: "flex",
                     flexDirection: "column",
                     alignItems: "center",
+                    textAlign: "center",
                 }}
             >
                 <Typography
@@ -62,7 +63,7 @@ const About = () => {
                         pt: "20px",
                         color: "gray",
                         fontSize: "16px",
-                        width: "60%",
+                        width: { sm: "60%", xs: "80%" },
                         textAlign: "center",
                         fontFamily: "revert-layer",
                     }}
@@ -76,7 +77,7 @@ const About = () => {
                 </Typography>
                 <Typography
                     sx={{
-                        fontSize: "35px",
+                        fontSize: { md: "32px", xs: "26px" },
                         fontWeight: "700",
                         color: "#00899d;",
                         borderBottom: "2px solid #00899d;",
@@ -88,18 +89,25 @@ const About = () => {
                 <Box
                     sx={{
                         pt: "30px ",
-                        width: "70%",
+                        width: { sm: "70%", xs: "90%" },
                         display: "flex",
                         justifyContent: "space-evenly",
+                        flexWrap: "wrap",
                     }}
                 >
                     <Box
                         sx={{
-                            width: "20%",
+                            width: {
+                                lg: "20%",
+                                md: "30%",
+                                sm: "45%",
+                                xs: "90%",
+                            },
                             display: "flex",
                             flexDirection: "column",
                             alignItems: "center",
                             textAlign: "center",
+                            marginBottom: { sm: "30px", xs: "40px" },
                         }}
                     >
                         <img
@@ -112,11 +120,17 @@ const About = () => {
                     </Box>
                     <Box
                         sx={{
-                            width: "20%",
+                            width: {
+                                lg: "20%",
+                                md: "30%",
+                                sm: "45%",
+                                xs: "90%",
+                            },
                             display: "flex",
                             flexDirection: "column",
                             alignItems: "center",
                             textAlign: "center",
+                            marginBottom: { sm: "30px", xs: "40px" },
                         }}
                     >
                         <img
@@ -129,11 +143,17 @@ const About = () => {
                     </Box>
                     <Box
                         sx={{
-                            width: "20%",
+                            width: {
+                                lg: "20%",
+                                md: "30%",
+                                sm: "45%",
+                                xs: "90%",
+                            },
                             display: "flex",
                             flexDirection: "column",
                             alignItems: "center",
                             textAlign: "center",
+                            marginBottom: { sm: "30px", xs: "40px" },
                         }}
                     >
                         <img
@@ -146,11 +166,17 @@ const About = () => {
                     </Box>
                     <Box
                         sx={{
-                            width: "20%",
+                            width: {
+                                lg: "20%",
+                                md: "30%",
+                                sm: "45%",
+                                xs: "90%",
+                            },
                             display: "flex",
                             flexDirection: "column",
                             alignItems: "center",
                             textAlign: "center",
+                            marginBottom: { sm: "30px", xs: "40px" },
                         }}
                     >
                         <img
@@ -163,11 +189,18 @@ const About = () => {
                     </Box>
                     <Box
                         sx={{
-                            width: "20%",
+                            width: {
+                                lg: "20%",
+                                md: "30%",
+                                sm: "45%",
+                                xs: "90%",
+                            },
                             display: "flex",
                             flexDirection: "column",
                             alignItems: "center",
                             textAlign: "center",
+                            marginBottom: { sm: "30px", xs: "40px" },
+                            marginTop: { md: "0px", xs: "30px" },
                         }}
                     >
                         <img
