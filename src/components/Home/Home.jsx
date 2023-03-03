@@ -4,10 +4,10 @@ import "./Home.css";
 import "./Home.scss";
 import CalendarMonthOutlinedIcon from "@mui/icons-material/CalendarMonthOutlined";
 import Groups2OutlinedIcon from "@mui/icons-material/Groups2Outlined";
-import AgricultureOutlinedIcon from "@mui/icons-material/AgricultureOutlined";
 import ConstructionOutlinedIcon from "@mui/icons-material/ConstructionOutlined";
 import AnchorOutlinedIcon from "@mui/icons-material/AnchorOutlined";
-import AccountBalanceWalletOutlinedIcon from "@mui/icons-material/AccountBalanceWalletOutlined";
+import CardMembershipIcon from "@mui/icons-material/CardMembership";
+import HandymanIcon from "@mui/icons-material/Handyman";
 import { Button } from "@mui/material";
 const Home = () => {
     const [eshe, setEshe] = useState(false);
@@ -120,7 +120,7 @@ const Home = () => {
                     </div>
                     <div className="block" id={eshe ? "est" : "netu"}>
                         <div className="hexagon">
-                            <DesignServicesIcon
+                            <HandymanIcon
                                 fontSize="large"
                                 sx={{ color: "white" }}
                             />
