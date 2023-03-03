@@ -1,3 +1,318 @@
+// import React from "react";
+// import { createTheme } from "@mui/material/styles";
+// import Box from "@mui/material/Box";
+// import TwitterIcon from "@mui/icons-material/Twitter";
+// import InstagramIcon from "@mui/icons-material/Instagram";
+// import FacebookIcon from "@mui/icons-material/Facebook";
+// import TelegramIcon from "@mui/icons-material/Telegram";
+
+// import { Link, List, ListItem, Typography, Button } from "@mui/material";
+
+// import { useNavigate } from "react-router-dom";
+// import { color } from "@mui/system";
+
+// const Footer = () => {
+//     const navigate = useNavigate();
+
+//     const [openContact, setOpenContact] = React.useState(false);
+
+//     const handleContact = () => {
+//         setOpenContact(!openContact);
+//     };
+
+//     const [openCorporate, setOpenCorporate] = React.useState(false);
+
+//     const handleCorporate = () => {
+//         setOpenCorporate(!openCorporate);
+//     };
+
+//     const contact = [
+//         "Поддержка Авторов",
+//         "Опубликовать на сайте",
+//         "Вакансия",
+//         "Компания",
+//     ];
+//     const onas = [
+//         "AN-3 Company - Завод по производству бетонных изделий",
+//     ];
+
+// const theme = createTheme({
+//     breakpoints: {
+//         values: {
+//             xs: 0,
+//             sm: 600,
+//             md: 1024,
+//             lg: 1200,
+//             xl: 1536,
+//         },
+//     },
+// });
+
+//     // function hover(e) {
+//     //     e.after("red");
+//     // }
+
+//     return (
+//         <Box
+//             sx={{
+//                 backgroundColor: "#111114",
+//                 color: "#e5e7eb",
+//             }}
+//         >
+//             <Box
+//                 sx={{
+//                     display: "flex",
+//                     justifyContent: "space-between",
+
+//                     [theme.breakpoints.down("md")]: {
+//                         display: "block",
+//                     },
+//                     padding: "2% 5%",
+//                     fontSize: "15px",
+//                     textDecoration: "none",
+//                     fontFamily: "OpenSans,sans-serif",
+
+//                     border: "solid rgba(122,139,160,.3)",
+//                     borderWidth: "0 0 1px",
+//                     padding: "23px 0",
+//                     width: "97%",
+//                     margin: "0 auto",
+//                 }}
+//             >
+//                 <Box sx={{ display: "flex", justifyContent: "end" }}>
+//                     <Box sx={{ width: "45%" }}>
+//                         <Typography
+//                             sx={{
+//                                 padding: "3px 10px",
+//                                 color: "White",
+//                                 fontSize: "30px",
+//                                 [theme.breakpoints.down("md")]: {
+//                                     display: "none",
+//                                 },
+//                                 pb: "20px",
+//                             }}
+//                         >
+//                             О Компании
+//                         </Typography>
+
+//                         <Box
+//                             sx={{
+//                                 display: "flex",
+//                             }}
+//                         >
+//                             <Box
+//                                 sx={{
+//                                     width: "70%",
+//                                 }}
+//                             >
+//                                 <List
+//                                     sx={{
+//                                         [theme.breakpoints.down("md")]: {
+//                                             padding: "0",
+//                                         },
+//                                     }}
+//                                 >
+//                                     {onas.map((i, index) => (
+//                                         <ListItem
+//                                             key={index}
+//                                             sx={{
+//                                                 padding: "10px",
+//                                                 margin: 0,
+//                                                 [theme.breakpoints.down("md")]:
+//                                                     {
+//                                                         display: "none",
+//                                                     },
+//                                             }}
+//                                         >
+//                                             {
+//                                                 <Link
+//                                                     sx={{
+//                                                         color: "gray",
+//                                                         fontSize: "18px",
+//                                                         cursor: "pointer",
+//                                                         transition: "0.5s",
+//                                                         textDecoration: "none",
+//                                                         fontFamily:
+//                                                             "revert-layer",
+//                                                         "&:hover": {
+//                                                             color: "#0099ff",
+//                                                         },
+//                                                     }}
+//                                                 >
+//                                                     {i}
+//                                                 </Link>
+//                                             }
+//                                         </ListItem>
+//                                     ))}
+//                                 </List>
+//                             </Box>
+//                         </Box>
+//                     </Box>
+//                     <Box sx={{ width: "45%" }}>
+// <Typography
+//     sx={{
+//         padding: "3px 10px",
+//         color: "White",
+//         fontSize: "30px",
+//         [theme.breakpoints.down("md")]: {
+//             display: "none",
+//         },
+//         pb: "20px",
+//     }}
+// >
+//     Контакты
+// </Typography>
+
+// <Box
+//     sx={{
+//         display: "flex",
+//     }}
+// >
+//     <Box
+//         sx={{
+//             width: "70%",
+//         }}
+//     >
+//         <Typography
+//             sx={{
+//                 color: "gray",
+//                 fontFamily: "revert-layer",
+//                 "&:hover": {
+//                     color: "#0099ff",
+//                 },
+//                 fontSize: "18px",
+//             }}
+//         >
+//             г. Астана, Промзона 6/2
+//         </Typography>
+//         <Typography
+//             sx={{
+//                 fontFamily: "revert-layer",
+
+//                 fontSize: "20px",
+//                 color: "gray",
+//             }}
+//         >
+//             Телефон:
+//         </Typography>
+//         <Typography
+//             sx={{
+//                 fontFamily: "revert-layer",
+//                 "&:hover": {
+//                     color: "#0099ff",
+//                 },
+//                 fontSize: "20px",
+//             }}
+//         >
+//             +7 (700) 500 91 71
+//         </Typography>
+//         <Typography
+//             sx={{
+//                 fontFamily: "revert-layer",
+
+//                 fontSize: "20px",
+//             }}
+//         >
+//             WhatsApp
+//         </Typography>
+//         <Typography>Email:</Typography>
+//         <Typography>an3companykz@mail.ru</Typography>
+//                             </Box>
+//                         </Box>
+//                     </Box>
+//                 </Box>
+
+//                 <Box>
+//                     <List
+//                         className="icons"
+//                         sx={{
+//                             display: "flex",
+//                             width: "30%",
+//                             [theme.breakpoints.down("md")]: {
+//                                 width: "15%",
+//                             },
+//                         }}
+//                     >
+//                         <ListItem>
+//                             <Link
+//                                 className="icon-instagram"
+//                                 href="https://www.instagram.com/an3companykz/"
+//                             >
+//                                 <InstagramIcon
+//                                     sx={{
+//                                         color: "gray",
+//                                         "&:hover": {
+//                                             color: "#0099ff",
+//                                         },
+//                                     }}
+//                                 />
+//                             </Link>
+//                         </ListItem>
+
+//                         <ListItem>
+//                             <Link
+//                                 className="icon-twitter"
+//                                 href="https://twitter.com/EpicGamesRU"
+//                             >
+//                                 <TwitterIcon
+//                                     sx={{
+//                                         color: "gray",
+//                                         "&:hover": {
+//                                             color: "#0099ff",
+//                                         },
+//                                     }}
+//                                 />
+//                             </Link>
+//                         </ListItem>
+
+//                         <ListItem>
+//                             <Link
+//                                 className="icon-facebook"
+//                                 href="https://www.facebook.com/epicgames/"
+//                             >
+//                                 <FacebookIcon
+//                                     sx={{
+//                                         color: "gray",
+//                                         "&:hover": {
+//                                             color: "#0099ff",
+//                                         },
+//                                     }}
+//                                 />
+//                             </Link>
+//                         </ListItem>
+//                     </List>
+//                 </Box>
+//             </Box>
+
+//             <Box
+//                 sx={{
+//                     display: "flex",
+//                     justifyContent: "center",
+//                     alignItems: "center",
+//                     padding: "80px",
+//                     paddingBottom: "50px",
+//                     paddingTop: "40px",
+//                     borderTopWidth: "1px",
+//                     borderColor: "white",
+//                 }}
+//             >
+//                 <Box
+//                     sx={{
+//                         display: "flex",
+//                         alignItems: "center",
+//                     }}
+//                 >
+//                     <Typography sx={{ fontSize: "13px" }}>
+//                         © All Rights Reserved by AN-3 Company TOO
+//                     </Typography>
+//                 </Box>
+//             </Box>
+//         </Box>
+//     );
+// };
+
+// export default Footer;
+
 import React from "react";
 import { createTheme } from "@mui/material/styles";
 import Box from "@mui/material/Box";
@@ -5,223 +320,157 @@ import TwitterIcon from "@mui/icons-material/Twitter";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import TelegramIcon from "@mui/icons-material/Telegram";
+import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 
 import { Link, List, ListItem, Typography, Button } from "@mui/material";
 
 import { useNavigate } from "react-router-dom";
 import { color } from "@mui/system";
 
-const Footer = () => {
-    const navigate = useNavigate();
-
-    const [openContact, setOpenContact] = React.useState(false);
-
-    const handleContact = () => {
-        setOpenContact(!openContact);
-    };
-
-    const [openCorporate, setOpenCorporate] = React.useState(false);
-
-    const handleCorporate = () => {
-        setOpenCorporate(!openCorporate);
-    };
-
-    const contact = [
-        "Поддержка Авторов",
-        "Опубликовать на сайте",
-        "Вакансия",
-        "Компания",
-    ];
-    const onas = [
-        "AN-3 Company - Завод по производству бетонных изделий",
-    ];
-
-    const theme = createTheme({
-        breakpoints: {
-            values: {
-                xs: 0,
-                sm: 600,
-                md: 1024,
-                lg: 1200,
-                xl: 1536,
-            },
+const theme = createTheme({
+    breakpoints: {
+        values: {
+            xs: 0,
+            sm: 600,
+            md: 1024,
+            lg: 1200,
+            xl: 1536,
         },
-    });
-
-    // function hover(e) {
-    //     e.after("red");
-    // }
-
+    },
+});
+const Footer = () => {
     return (
-        <Box
-            sx={{
-                backgroundColor: "#111114",
-                color: "#e5e7eb",
-            }}
-        >
+        <Box>
             <Box
                 sx={{
+                    width: "100%",
+                    backgroundColor: "#111114",
                     display: "flex",
                     justifyContent: "space-between",
-
-                    [theme.breakpoints.down("md")]: {
-                        display: "block",
-                    },
-                    padding: "2% 5%",
-                    fontSize: "15px",
-                    textDecoration: "none",
-                    fontFamily: "OpenSans,sans-serif",
-
-                    border: "solid rgba(122,139,160,.3)",
-                    borderWidth: "0 0 1px",
-                    padding: "23px 0",
-                    width: "97%",
-                    margin: "0 auto",
                 }}
             >
-                <Box sx={{ display: "flex", justifyContent: "end" }}>
-                    <Box sx={{ width: "45%" }}>
-                        <Typography
-                            sx={{
-                                padding: "3px 10px",
-                                color: "White",
-                                fontSize: "30px",
-                                [theme.breakpoints.down("md")]: {
-                                    display: "none",
-                                },
-                                pb: "20px",
-                            }}
-                        >
+                <Box
+                    sx={{
+                        width: "100%",
+                        display: "flex",
+                        pt: "50px",
+                        // pb: "50px",
+                    }}
+                >
+                    <Box
+                        sx={{
+                            width: "60%",
+                            display: "flex",
+                            flexDirection: "column",
+                            justifyContent: "center",
+                            alignItems: "center",
+                        }}
+                    >
+                        <Typography variant="h3" sx={{ color: "white" }}>
                             О Компании
                         </Typography>
-
-                        <Box
-                            sx={{
-                                display: "flex",
-                            }}
-                        >
-                            <Box
-                                sx={{
-                                    width: "70%",
-                                }}
-                            >
-                                <List
-                                    sx={{
-                                        [theme.breakpoints.down("md")]: {
-                                            padding: "0",
-                                        },
-                                    }}
-                                >
-                                    {onas.map((i, index) => (
-                                        <ListItem
-                                            key={index}
-                                            sx={{
-                                                padding: "10px",
-                                                margin: 0,
-                                                [theme.breakpoints.down("md")]:
-                                                    {
-                                                        display: "none",
-                                                    },
-                                            }}
-                                        >
-                                            {
-                                                <Link
-                                                    sx={{
-                                                        color: "gray",
-                                                        fontSize: "18px",
-                                                        cursor: "pointer",
-                                                        transition: "0.5s",
-                                                        textDecoration: "none",
-                                                        fontFamily:
-                                                            "revert-layer",
-                                                        "&:hover": {
-                                                            color: "#0099ff",
-                                                        },
-                                                    }}
-                                                >
-                                                    {i}
-                                                </Link>
-                                            }
-                                        </ListItem>
-                                    ))}
-                                </List>
-                            </Box>
-                        </Box>
-                    </Box>
-                    <Box sx={{ width: "45%" }}>
                         <Typography
                             sx={{
-                                padding: "3px 10px",
-                                color: "White",
-                                fontSize: "30px",
-                                [theme.breakpoints.down("md")]: {
-                                    display: "none",
+                                color: "gray",
+                                fontFamily: "revert-layer",
+                                "&:hover": {
+                                    color: "#0099ff",
                                 },
-                                pb: "20px",
+                                fontSize: "18px",
                             }}
                         >
+                            "AN-3 Company - Завод по производству бетонных
+                            изделий"
+                        </Typography>
+                    </Box>
+                    <Box
+                        sx={{
+                            width: "40%",
+                            display: "flex",
+                            flexDirection: "column",
+                            justifyContent: "center",
+                            alignItems: "center",
+                            pb: "20px ",
+                        }}
+                    >
+                        <Typography variant="h3" sx={{ color: "white" }}>
                             Контакты
                         </Typography>
 
-                        <Box
+                        <Typography
                             sx={{
-                                display: "flex",
+                                color: "gray",
+                                fontFamily: "revert-layer",
+                                "&:hover": {
+                                    color: "#0099ff",
+                                },
+                                fontSize: "18px",
                             }}
                         >
-                            <Box
-                                sx={{
-                                    width: "70%",
-                                }}
-                            >
-                                <Typography
-                                    sx={{
-                                        color: "gray",
-                                        fontFamily: "revert-layer",
-                                        "&:hover": {
-                                            color: "#0099ff",
-                                        },
-                                        fontSize: "18px",
-                                    }}
-                                >
-                                    г. Астана, Промзона 6/2
-                                </Typography>
-                                <Typography
-                                    sx={{
-                                        fontFamily: "revert-layer",
-
-                                        fontSize: "20px",
-                                        color: "gray",
-                                    }}
-                                >
-                                    Телефон:
-                                </Typography>
-                                <Typography
-                                    sx={{
-                                        fontFamily: "revert-layer",
-                                        "&:hover": {
-                                            color: "#0099ff",
-                                        },
-                                        fontSize: "20px",
-                                    }}
-                                >
-                                    +7 (700) 500 91 71
-                                </Typography>
-                                <Typography
-                                    sx={{
-                                        fontFamily: "revert-layer",
-
-                                        fontSize: "20px",
-                                    }}
-                                >
-                                    WhatsApp
-                                </Typography>
-                                <Typography>Email:</Typography>
-                                <Typography>an3companykz@mail.ru</Typography>
-                            </Box>
-                        </Box>
+                            г. Астана, Промзона 6/2
+                        </Typography>
+                        <Typography
+                            sx={{
+                                color: "gray",
+                                fontFamily: "revert-layer",
+                                "&:hover": {
+                                    color: "#0099ff",
+                                },
+                                fontSize: "25px",
+                            }}
+                        >
+                            Телефон:
+                        </Typography>
+                        <Typography
+                            sx={{
+                                color: "gray",
+                                fontFamily: "revert-layer",
+                                "&:hover": {
+                                    color: "#0099ff",
+                                },
+                                fontSize: "25px",
+                            }}
+                        >
+                            +7 (700) 500 91 71
+                        </Typography>
+                        <Typography
+                            sx={{
+                                color: "gray",
+                                fontFamily: "revert-layer",
+                                "&:hover": {
+                                    color: "#0099ff",
+                                },
+                                fontSize: "25px",
+                            }}
+                        >
+                            <WhatsAppIcon /> WhatsApp
+                        </Typography>
+                        <Typography
+                            sx={{
+                                color: "gray",
+                                fontFamily: "revert-layer",
+                                "&:hover": {
+                                    color: "#0099ff",
+                                },
+                                fontSize: "25px",
+                            }}
+                        >
+                            Email:
+                        </Typography>
+                        <Typography
+                            sx={{
+                                color: "gray",
+                                fontFamily: "revert-layer",
+                                "&:hover": {
+                                    color: "#0099ff",
+                                },
+                                fontSize: "25px",
+                            }}
+                        >
+                            an3company@mail.ru
+                        </Typography>
                     </Box>
                 </Box>
-
                 <Box>
                     <List
                         className="icons"
@@ -283,7 +532,6 @@ const Footer = () => {
                     </List>
                 </Box>
             </Box>
-
             <Box
                 sx={{
                     display: "flex",
@@ -292,8 +540,11 @@ const Footer = () => {
                     padding: "80px",
                     paddingBottom: "50px",
                     paddingTop: "40px",
-                    borderTopWidth: "1px",
+                    // borderTopWidth: "1px",
                     borderColor: "white",
+                    backgroundColor: "#0a0a0a",
+                    color: "white",
+                    // borderTop: "3px solid black",
                 }}
             >
                 <Box
@@ -302,7 +553,7 @@ const Footer = () => {
                         alignItems: "center",
                     }}
                 >
-                    <Typography sx={{ fontSize: "13px" }}>
+                    <Typography sx={{ fontSize: "`7px" }}>
                         © All Rights Reserved by AN-3 Company TOO
                     </Typography>
                 </Box>
