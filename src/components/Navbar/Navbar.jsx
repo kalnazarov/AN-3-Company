@@ -25,6 +25,7 @@ import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { useAuth } from "../../contexts/AuthContext";
 import { width } from "@mui/system";
+import Sidebar from "../SideBar/Sidebar";
 
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 const style = {
@@ -69,6 +70,7 @@ function Navbar() {
     const [activeReg, setActiveReg] = useState(false);
     const [anchorEl, setAnchorEl] = React.useState(null);
     const [open, setOpen] = React.useState(false);
+    const [openMenu, setOpenMenu] = React.useState(false);
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
     // console.log(email);
@@ -97,6 +99,7 @@ function Navbar() {
 
     return (
         <Box sx={{ pt: "10px ", pb: "10px" }}>
+            {openMenu && <Sidebar setOpenMenu={setOpenMenu} />}
             <AppBar position="static" className="header">
                 <Container
                     className="container"
@@ -127,13 +130,17 @@ function Navbar() {
                                 aria-label="account of current user"
                                 aria-controls="menu-appbar"
                                 aria-haspopup="true"
-                                onClick={handleOpenNavMenu}
+                                onClick={() => {
+                                    // handleOpenNavMenu();
+                                    setOpenMenu(true);
+                                }}
                                 color="inherit"
                                 sx={{ display: { xs: "block", md: "none" } }}
                             >
                                 <MenuIcon sx={{ color: "black" }} />
                             </IconButton>
-                            <Menu
+
+                            {/* <Menu
                                 id="menu-appbar"
                                 anchorEl={anchorElNav}
                                 anchorOrigin={{
@@ -175,7 +182,7 @@ function Navbar() {
                                 >
                                     О нас
                                 </li>
-                            </Menu>
+                            </Menu> */}
                         </Box>
 
                         {/* <Typography
