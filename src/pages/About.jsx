@@ -2,6 +2,7 @@ import { Typography } from "@mui/material";
 import { Box, fontWeight, width } from "@mui/system";
 import React from "react";
 
+import adik from "../media/adik.PNG";
 const About = () => {
     return (
         <div>
@@ -21,12 +22,22 @@ const About = () => {
                     >
                         О КОМАНДЕ
                     </h2>
-                    {/* <button>WhatsApp</button> */}
+                    <button>
+                        <a
+                            style={{
+                                textDecoration: "none",
+                                color: "white",
+                            }}
+                            href="https://wa.me/77005009171"
+                        >
+                            WhatsApp
+                        </a>
+                    </button>
                 </div>
             </div>
             <Box
                 sx={{
-                    pb: "50px",
+                    pb: "30px",
                     pt: "50px",
                     display: "flex",
                     flexDirection: "column",
@@ -47,28 +58,26 @@ const About = () => {
 
                 <Typography
                     sx={{
-                        pt: "20px",
+                        pt: "40px",
                         color: "gray",
-                        fontSize: "20px",
+                        fontSize: "25px",
                         fontWeight: "400",
                         fontFamily: "revert-layer",
                     }}
                 >
-                    Гарантия качества с 2004 года - более 300 выполненных
-                    проектов.
+                    Наша команда существует с 2022 года как AN-3 Company.
                 </Typography>
 
                 <Typography
                     sx={{
-                        pt: "20px",
+                        pt: "30px",
                         color: "gray",
-                        fontSize: "16px",
+                        fontSize: "20px",
                         width: { sm: "60%", xs: "80%" },
                         textAlign: "center",
                         fontFamily: "revert-layer",
                     }}
                 >
-                    Наша команда существует с 2022 года как AN-3 Company.
                     Опытные специалисты со своей зоной ответственности,
                     выполняющих руководящие функции. Они владеют управленческими
                     компетенциями и организуют производственные процессы/работу
@@ -88,7 +97,7 @@ const About = () => {
                 </Typography>
                 <Box
                     sx={{
-                        pt: "30px ",
+                        pt: "50px ",
                         width: { sm: "70%", xs: "90%" },
                         display: "flex",
                         justifyContent: "space-evenly",
@@ -213,29 +222,79 @@ const About = () => {
                     </Box>
                 </Box>
             </Box>
-            <Box sx={{ display: "flex", justifyContent: "center" }}>
+            <Box
+                sx={{
+                    backgroundImage: `url("https://oir.mobi/uploads/posts/2021-03/thumbs/1616439996_39-p-belo-goluboi-fon-dlya-prezentatsii-45.jpg")`,
+                }}
+            >
                 <Box
                     sx={{
                         display: "flex",
-                        justifyContent: "space-evenly",
-                        width: "80%",
+                        justifyContent: "center",
                     }}
                 >
-                    <img
-                        style={{ width: "30%", pt: "20px" }}
-                        src="https://krasivosti.pro/uploads/posts/2021-04/1618579272_34-krasivosti_pro-p-lev-na-dereve-lvi-krasivo-foto-40.jpg"
-                        alt=""
-                    />
-                    <img
-                        style={{ width: "30%" }}
-                        src="https://krasivosti.pro/uploads/posts/2021-04/1618579272_34-krasivosti_pro-p-lev-na-dereve-lvi-krasivo-foto-40.jpg"
-                        alt=""
-                    />
-                    <img
-                        style={{ width: "30%", pt: "20px" }}
-                        src="https://krasivosti.pro/uploads/posts/2021-04/1618579272_34-krasivosti_pro-p-lev-na-dereve-lvi-krasivo-foto-40.jpg"
-                        alt=""
-                    />
+                    <Box
+                        sx={{
+                            display: "flex",
+                            justifyContent: "space-evenly",
+                            width: "80%",
+                            pb: "20px",
+                            pt: "50px",
+                        }}
+                    >
+                        <img
+                            style={{
+                                width: "20%",
+                                pt: "20px",
+                                border: "10px solid #00899d",
+                            }}
+                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/User-avatar.svg/2048px-User-avatar.svg.png"
+                            alt=""
+                        />
+
+                        <img
+                            style={{
+                                width: "20%",
+                                border: "10px solid #00899d",
+                            }}
+                            src={adik}
+                            alt=""
+                        />
+
+                        <img
+                            style={{
+                                width: "20%",
+                                pt: "20px",
+                                border: "10px solid #00899d",
+                            }}
+                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/User-avatar.svg/2048px-User-avatar.svg.png"
+                            alt=""
+                        />
+                    </Box>
+                </Box>
+                <Box
+                    sx={{
+                        display: "flex",
+                        justifyContent: "center",
+                        pb: "50px",
+                    }}
+                >
+                    <Box sx={{ width: "25%" }}></Box>
+                    <Box sx={{ width: "25%", textAlign: "center" }}>
+                        <Typography
+                            sx={{
+                                fontSize: "25px",
+                                color: "#00899d",
+                                fontWeight: "bold",
+                            }}
+                        >
+                            Директор
+                        </Typography>
+                        <Typography sx={{ fontSize: "20px" }}>
+                            Айбеков Әдлет
+                        </Typography>
+                    </Box>
+                    <Box sx={{ width: "25%" }}></Box>
                 </Box>
             </Box>
         </div>

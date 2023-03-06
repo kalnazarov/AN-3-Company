@@ -132,3 +132,8 @@
         width: 255px !important;
     }
 }
+@media (max-width: 1200px) {
+    .logo {
+        display: none !important;
+    }
+}

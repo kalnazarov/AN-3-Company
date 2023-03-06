@@ -25,6 +25,17 @@ const Certificate = () => {
                     >
                         Сертификаты
                     </h2>
+                    <button>
+                        <a
+                            style={{
+                                textDecoration: "none",
+                                color: "white",
+                            }}
+                            href="https://wa.me/77005009171"
+                        >
+                            WhatsApp
+                        </a>
+                    </button>
                 </div>
             </div>
             <Box
@@ -51,7 +62,7 @@ const Certificate = () => {
                     display: "flex",
                     justifyContent: "space-evenly",
                     flexWrap: "wrap",
-                    pb: "50px",
+                    mb: "50px",
                 }}
                 className="cert_img_block"
             >

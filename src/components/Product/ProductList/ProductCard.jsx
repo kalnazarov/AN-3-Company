@@ -44,7 +44,7 @@ const ProductCard = ({ item }) => {
                 )}
             </div>
             <Button color="primary">{item.price}/кв.м</Button>
-            <button>{item.price} тенге/ кв.м</button>
+            <button>{item.price} тг/м2</button>
         </div>
     );
 };

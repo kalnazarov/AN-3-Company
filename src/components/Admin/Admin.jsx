@@ -1,4 +1,5 @@
 import React, { useContext, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { productContext } from "../../contexts/ProductContext";
 import "./Admin.scss";
 const Admin = () => {
@@ -9,6 +10,7 @@ const Admin = () => {
     const [color, setColor] = useState("");
     const [img, setImg] = useState("");
     const { addProduct } = useContext(productContext);
+    const navigate = useNavigate();
     function handleData() {
         let obj = {
             title,
@@ -65,7 +67,10 @@ const Admin = () => {
                     <option value="200*100*80мм">200*100*80мм</option>
                     <option value="200*100*100мм">200*100*100мм</option>
                 </select>
-                <button onClick={handleData}>add</button>
+
+                <button onClick={(() => navigate(`/product`), handleData)}>
+                    Добавить Продукт
+                </button>
             </div>
         </div>
     );

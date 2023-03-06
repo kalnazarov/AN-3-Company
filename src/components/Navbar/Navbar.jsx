@@ -227,6 +227,7 @@ function Navbar() {
                                 href="/"
                                 className="logo"
                                 sx={{
+                                   
                                     fontSize: "20px",
                                     color: "gray",
                                     textDecoration: "none",
