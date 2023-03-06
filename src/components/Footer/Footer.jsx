@@ -176,7 +176,7 @@ const Footer = () => {
                                 <ListItem>
                                     <Link
                                         className="icon-instagram"
-                                        // href="https://www.instagram.com/an3companykz/"
+                                        href="https://wa.me/77005009171"
                                     >
                                         <WhatsAppIcon
                                             sx={{
