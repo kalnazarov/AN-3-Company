@@ -9,6 +9,7 @@ const Admin = () => {
     const [material, setMaterial] = useState("");
     const [color, setColor] = useState("");
     const [img, setImg] = useState("");
+    const [call, setCall] = useState("");
     const { addProduct } = useContext(productContext);
     const navigate = useNavigate();
     function handleData() {
@@ -38,35 +39,34 @@ const Admin = () => {
                 <input
                     type="text"
                     onChange={(e) => setTitle(e.target.value)}
-                    placeholder="title"
+                    placeholder="Название"
                 />
 
                 <input
                     type="text"
                     onChange={(e) => setPrice(e.target.value)}
-                    placeholder="price"
+                    placeholder="Цена"
                 />
                 <input
                     type="text"
                     onChange={(e) => setMaterial(e.target.value)}
-                    placeholder="material"
+                    placeholder="Материал"
                 />
                 <input
                     type="text"
                     onChange={(e) => setColor(e.target.value)}
-                    placeholder="color"
+                    placeholder="Цвет"
                 />
                 <input
                     type="text"
                     onChange={(e) => setImg(e.target.value)}
                     placeholder="image"
                 />
-                <select onChange={(e) => setSize(e.target.value)}>
-                    <option value="200*100*40мм">200*100*40мм</option>
-                    <option value="200*100*60мм">200*100*60мм</option>
-                    <option value="200*100*80мм">200*100*80мм</option>
-                    <option value="200*100*100мм">200*100*100мм</option>
-                </select>
+                <input
+                    placeholder="Размер"
+                    onChange={(e) => setSize(e.target.value)}
+                ></input>
+                
 
                 <button onClick={(() => navigate(`/product`), handleData)}>
                     Добавить Продукт

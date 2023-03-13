@@ -98,7 +98,7 @@ function Navbar() {
     };
 
     return (
-        <Box sx={{ pt: "10px ", pb: "10px" }}>
+        <Box className="hui_v_moem_dome" sx={{ pt: "10px ", pb: "10px" }}>
             {openMenu && <Sidebar setOpenMenu={setOpenMenu} />}
             <AppBar position="static" className="header">
                 <Container
@@ -208,7 +208,7 @@ function Navbar() {
                             />
                         </Typography> */}
                         <Box>
-                            <img
+                            <img className="logotip"
                                 style={{
                                     width: "130px",
                                     height: "130px",

@@ -10,18 +10,23 @@ const ProductCard = ({ item }) => {
     const {
         user: { email },
     } = useAuth();
-    const ADMIN = "adik@mail.ru";
+    const ADMIN = "aibekovadik@mail.ru";
     return (
         <div className="prod_card">
             <div style={{ width: "100%" }}>
-                <img src={item.img} alt="" width="100%" />
+                <img
+                    src={item.img}
+                    alt=""
+                    width="100%"
+                    style={{ height: "300px" }}
+                />
             </div>
             <div className="prod_card_body">
                 <h3>{item.title}</h3>
                 <div className="prod_card_body_info">
-                    <p>размер: {item.size}</p>
-                    <p>цвет: {item.color}</p>
-                    <p>материал: {item.material}</p>
+                    <p>Размер: {item.size}</p>
+                    <p>Цвет: {item.color}</p>
+                    <p>Материал: {item.material}</p>
                 </div>
                 {email == ADMIN && (
                     <div>
@@ -31,20 +36,21 @@ const ProductCard = ({ item }) => {
                             sx={{ marginRight: "10px" }}
                             onClick={() => navigate(`/edit/${item.id}`)}
                         >
-                            edit
+                            Edit
                         </Button>
                         <Button
                             color="error"
                             variant="contained"
                             onClick={() => deleteProduct(item.id)}
                         >
-                            delete
+                            Delete
                         </Button>
                     </div>
                 )}
             </div>
-            <Button color="primary">{item.price}/кв.м</Button>
-            <button>{item.price} тг/м2</button>
+          
+            <button>{item.price}</button>
+            
         </div>
     );
 };

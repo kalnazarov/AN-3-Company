@@ -76,7 +76,26 @@ const Footer = () => {
                             "AN-3 Company - Завод по производству бетонных
                             изделий"
                         </Typography>
+                        <Box sx={{ pt: "40px" }}>
+                            <Typography variant="h6" sx={{ color: "white" }}>
+                                Разработчик сайта
+                            </Typography>
+                            <a
+                                style={{
+                                    fontFamily: "revert-layer",
+                                    color:'gray',
+                                    fontSize: "18px",
+                                    "&:hover": {
+                                        color: "red",
+                                    },
+                                }}
+                                href="https://www.instagram.com/kalnazarov_/"
+                            >
+                                @kalnazrov_
+                            </a>
+                        </Box>
                     </Box>
+
                     <Box
                         sx={{
                             width: "40%",
