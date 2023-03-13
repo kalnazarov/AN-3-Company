@@ -14,7 +14,7 @@ const Product = () => {
                     className="welcome_img"
                 />
                 <div className="welcome_header">
-                    <h2
+                    <h2 className="title"
                         style={{
                             fontSize: "35px",
                             fontWeight: "500",
@@ -40,7 +40,7 @@ const Product = () => {
                 <ProductList />
             </div>
             <div className="about_product_image">
-                <h1>О нашей продукции</h1>
+                <h1 className="none">О нашей продукции</h1>
             </div>
 
             <div className="main_about_block">

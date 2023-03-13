@@ -19,18 +19,21 @@ const ProductList = () => {
     const {
         user: { email },
     } = useAuth();
-    const ADMIN = "sultan4ik2003@mail.ru";
+    const ADMIN = "aibekovadik@mail.ru";
     useEffect(() => {
         getProduct();
     }, []);
     const navigate = useNavigate();
     return (
         <div className="product_list">
-            <h1>тротуарная плитка</h1>
-            {email && (
+            <h1>Тротуарная плитка</h1>
+
+            {email === ADMIN ? (
                 <Button onClick={() => navigate("/admin")} variant="contained">
-                    new product
+                    New product
                 </Button>
+            ) : (
+                <></>
             )}
             <Box
                 sx={{

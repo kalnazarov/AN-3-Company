@@ -57,26 +57,26 @@ const Edit = () => {
                 <input
                     type="text"
                     onChange={(e) => setTitle(e.target.value)}
-                    placeholder="title"
+                    placeholder="Название"
                     value={title}
                 />
 
                 <input
                     type="text"
                     onChange={(e) => setPrice(e.target.value)}
-                    placeholder="price"
+                    placeholder="Цена"
                     value={price}
                 />
                 <input
                     type="text"
                     onChange={(e) => setMaterial(e.target.value)}
-                    placeholder="material"
+                    placeholder="Материал"
                     value={material}
                 />
                 <input
                     type="text"
                     onChange={(e) => setColor(e.target.value)}
-                    placeholder="color"
+                    placeholder="Цвет"
                     value={color}
                 />
                 <input
@@ -85,13 +85,11 @@ const Edit = () => {
                     placeholder="image"
                     value={img}
                 />
-                <select value={size} onChange={(e) => setSize(e.target.value)}>
-                    <option value="200*100*40мм">200*100*40мм</option>
-                    <option value="200*100*60мм">200*100*60мм</option>
-                    <option value="200*100*80мм">200*100*80мм</option>
-                    <option value="200*100*100мм">200*100*100мм</option>
-                </select>
-                <button onClick={handleData}>edit</button>
+                <input
+                    placeholder="Размер"
+                    onChange={(e) => setSize(e.target.value)}
+                ></input>
+                <button onClick={handleData} >Редактировать</button>
             </div>
         </div>
     );
